@@ -12,3 +12,7 @@
 </div>
 
 --------------------------------
+
+![Logo](https://github.com/agoor97/mlops-tools-playlist/assets/81787449/febfe3e9-afb3-4808-97fd-637c2f901d8f)
+
+------------------
