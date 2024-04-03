@@ -1,0 +1,53 @@
+stages:
+  prepare:
+    cmd: python data_prep.py
+    deps:
+      - data_prep.py
+    params:
+      - prepare.age_threshold
+    outs:
+      - ./outs/prepared_df.csv
+
+  process:
+    cmd: python data_process.py
+    deps:
+      - data_process.py
+      - ./outs/prepared_df.csv
+    params:
+      - process.test_size
+      - process.seed
+    outs:
+      - ./outs/processed_test_X.csv
+      - ./outs/processed_test_y.csv
+      - ./outs/processed_train_X.csv
+      - ./outs/processed_train_y.csv
+
+  train:
+    cmd: python data_train.py
+    deps:
+      - data_train.py
+      - ./outs/processed_test_X.csv
+      - ./outs/processed_test_y.csv
+      - ./outs/processed_train_X.csv
+      - ./outs/processed_train_y.csv
+    params:
+      - train.n_estimators
+      - train.max_depth
+    outs:
+      - ./conf_matrix.png
+      - ./roc_curve.png
+      
+    metrics:
+      - metrics.json:
+          cache: false
+
+
+plots:
+  - ./roc_curve.png
+  - ./conf_matrix.png
+  - ROC:
+      template: linear
+      title: ROC Curve
+      x: fpr
+      y:
+        roc_data.csv: "tpr"

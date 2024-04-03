@@ -1,0 +1,10 @@
+prepare: 
+  age_threshold: 80
+
+process:
+  test_size: 0.35
+  seed: 20
+
+train:
+  n_estimators: 210
+  max_depth: 15
