@@ -1,7 +1,7 @@
 ## Mastering MLOps Tools
 
-* `Welcome to the MLOps Tools Explained code repository!.`
-* `Here, you'll find the code files corresponding to the topics covered in our video playlist. `
+* `Welcome to the Learn MLOps Tools code repository!.`
+* `Here, you'll find the code files corresponding to the topics covered in my course playlist. `
 
 --------------------------------
 
