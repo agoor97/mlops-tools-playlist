@@ -8,7 +8,7 @@
 ![MLflow Components](https://miro.medium.com/v2/resize:fit:1400/1*4HJRLpBjbE630Fts-UZsQg.png)
 
 ------------------
-
+## MLFLOW PROJECT
 ``` bash
 # Get conda channels
 conda config --show channels
