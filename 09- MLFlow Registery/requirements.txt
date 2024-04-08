@@ -1,0 +1,8 @@
+scikit-learn==1.2.2
+sklearn-features==0.0.2
+imblearn
+matplotlib
+seaborn
+mlflow==2.11.3
+xgboost
+mysqlclient==2.2.4
