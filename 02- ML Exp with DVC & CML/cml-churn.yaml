@@ -14,7 +14,6 @@ jobs:
           python-version: '3.x'
       - uses: iterative/setup-cml@v1
 
-
       - name: Prepare Environment
         env:
           GDRIVE_CREDENTIALS_DATA: ${{ secrets.GDRIVE_CREDENTIALS_DATA }}
